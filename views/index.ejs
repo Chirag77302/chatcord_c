@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/enter.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container" style="height: 100vh;">
+        <div class="row align-items-center justify-content-center" style="height: inherit;">
+            <div class="row col-md-10 p-0" style="background-color: white; height: 70%;">
+                <header style="background-color: #667aff;">
+                    <h1 class="p-2"><i class="fas fa-smile"></i> ChatCord</h1>
+                </header>
+               
+               <div class="col-sm-3 chat-sidebar" style="height: 89%; background-color: #7386ff;">
+                    <h3 class="people p-1" style="color: white;"><i class="fas fa-users"></i> Users</h3>
+                    <ul id="people-list" style="color: white;"></ul>
+               </div>
+
+               <div class="col-sm-12  col-md-9 p-0" style="height: 89%; background-color: white;">
+                    <div id="message-panel" class="message-box" style="height: 80%; background-color: white;">
+
+                    </div>
+                    <div class="message-sending-box row m-0" style="height: 20%;width: 100%;  background-color:#667aff;">
+                        <div class="col-sm-10 row align-items-center justify-content-center p-0">
+                            <input class="p-1" type="text" style="width: 80%;" id="text-message" name="chat-message" placeholder="Enter Message here">
+                        </div>
+                        <div class="col-sm-2 row align-items-center justify-content-center p-0">
+                            <button id="send-message-button" onclick="sendMessage()" style="color: #667aff; width: 70%;"><i class="fas fa-paper-plane" style="color:#667aff ;"></i> Send</button>
+                        </div>
+                    </div>
+
+               </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- <header><h1 style="text-align: center;">WELCOME TO YOUR ROOM</h1></header>
+    <div class="container" >
+
+        <div class="col-3">
+            <h1 class="people" style="color: white;">PEOPLE</h1>
+            <ul id="people-list"></ul>
+        </div>
+
+        <div class="col-9">
+            <div id="message-panel" class="message-box">
+
+            </div>
+            <div class="message-sending-box">
+                <input type="text" id="text-message" name="chat-message" placeholder="Enter Message here">
+                <button id="send-message-button" onclick="sendMessage()"><i class="fas fa-paper-plane"></i> Send</button>
+            </div>
+        </div>
+
+    </div> -->
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/chat.js"></script>
+    
+</body>
+</html>

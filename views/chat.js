@@ -17,6 +17,7 @@
                     text:msg
                 }
                 console.log(sendmsg);
+                document.getElementById('text-message').value = "";
                 socket.emit('sendmessage',sendmsg)
             }
 
